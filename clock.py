@@ -56,7 +56,7 @@ def minute_hand(minute):
     forward(150)
     backward(150)
     left(minute*6)
-
+#forever
 while(True):
     hour = datetime.now().hour
     minute = datetime.now().minute
