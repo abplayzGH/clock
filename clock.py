@@ -1,6 +1,6 @@
 from datetime import datetime
 import turtle
-from tkinter import Tk as tk
+# from tkinter import Tk as tk
 
 t = turtle.Turtle()
 
