@@ -1,56 +1,72 @@
 from datetime import datetime
 
-from turtle import *
-# background
-# color("white")
-# penup()
-# goto(-200,-200)
-# right(45)
-# begin_fill()
-# circle(400,360,4)
-# end_fill()
-# tracer(0,0)
-def main():
-    hideturtle()
-    speed(0)
-    pensize(2)
-    penup()
-    goto(0,-200)
-    pendown()
-    circle(200)
-    penup()
-    goto(0,0)
-    pendown()
+import turtle
+from tkinter import Tk as tk
+t = turtle.Turtle()
+
+
+
+
+def make_circle():
+    t.hideturtle()
+    turtle.tracer(0,0)
+    t.pensize(2)
+    t.penup()
+    t.goto(0,-200)
+    t.pendown()
+    t.circle(200)
+    t.penup()
+    t.goto(0,0)
+    for i in range(12):
+        t.penup()
+        t.forward(175)
+        t.pendown()
+        t.write(15-i)
+        t.forward(25)
+        t.penup()
+        t.backward(200)
+        t.left(30)
+        t.penup()
+        t.goto(0,0)
+    t.pendown()
+
+
 
 def second_hand(second):
-    tracer(0,0)
-    color("black")
-    right(second*6)
-    forward(175)
-    backward(175)
-    left(second*6)
-    update()
+    # turtle.tracer(0,0)
+    t.color("red")
+    t.right(second*6)
+    t.forward(170)
+    t.backward(170)
+    t.left(second*6)
 
 
 
 def minute_hand(minute):
-    tracer(0,0)
-    color("red")
-    right(minute*6)
-    forward(150)
-    backward(150)
-    left(minute*6)
-    update()
+    # turtle.tracer(0,0)
+    t.color("black")
+    t.right(minute)
+    t.forward(150)
+    t.backward(150)
+    t.left(minute)
+
+def hour_hand(hour):
+    # turtle.tracer(0,0)
+    t.color("black")
+    t.right(hour*6)
+    t.forward(100)
+    t.backward(100)
+    t.left(hour*6)
+
 #forever
 while(True):
-    second 
     hour = datetime.now().hour
     minute = datetime.now().minute
     second = datetime.now().second
-    main()
+    make_circle()
     minute_hand(minute - 15)
-    if  second ==
     second_hand(second - 15)
-    print(datetime.now().second)
-    clear()
+    hour_hand(hour - 27)
+    turtle.update()
+    t.clear()
     
