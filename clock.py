@@ -1,9 +1,8 @@
 from datetime import datetime
-
 import turtle
 from tkinter import Tk as tk
-t = turtle.Turtle()
 
+t = turtle.Turtle()
 
 num_list = [3,2,1,12,11,10,9,8,7,6,5,4]
 
@@ -31,8 +30,6 @@ def make_circle():
     t.left(60)
     t.pendown()
 
-
-
 def second_hand(second):
     # turtle.tracer(0,0)
     t.color("red")
@@ -40,8 +37,6 @@ def second_hand(second):
     t.forward(170)
     t.backward(170)
     t.left(second*6)
-
-
 
 def minute_hand(minute, second):
     # turtle.tracer(0,0)
@@ -60,7 +55,7 @@ def hour_hand(hour):
     t.left(hour*6)
 
 #forever
-while(True):
+while True:
     hour = datetime.now().hour
     minute = datetime.now().minute
     second = datetime.now().second
