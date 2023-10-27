@@ -5,7 +5,7 @@ from tkinter import Tk as tk
 t = turtle.Turtle()
 
 
-
+list = [3,2,1,12,11,10,9,8,7,6,5,4]
 
 def make_circle():
     t.hideturtle()
@@ -17,11 +17,11 @@ def make_circle():
     t.circle(200)
     t.penup()
     t.goto(0,0)
-    for i in range(12):
+    for i in range(0,12,1):
         t.penup()
         t.forward(175)
         t.pendown()
-        t.write(15-i)
+        t.write(list[i])
         t.forward(25)
         t.penup()
         t.backward(200)
