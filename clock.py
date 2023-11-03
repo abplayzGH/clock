@@ -45,10 +45,10 @@ def second_hand(second):
 def minute_hand(minute):
     # turtle.tracer(0,0)
     t.color("black")
-    t.right(minute)
+    t.right(minute * 6)
     t.forward(150)
     t.backward(150)
-    t.left(minute)
+    t.left(minute * 6)
 
 def hour_hand(hour):
     # turtle.tracer(0,0)
