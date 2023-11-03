@@ -11,7 +11,7 @@ list = [3,2,1,12,11,10,9,8,7,6,5,4]
 def make_circle():
     t.hideturtle()
     turtle.tracer(0,0)
-    t.pensize(2)
+    t.pensize(2.2)
     t.penup()
     t.goto(0,-200)
     t.pendown()
